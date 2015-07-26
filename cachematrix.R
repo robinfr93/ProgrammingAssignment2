@@ -3,6 +3,7 @@
 ## inverseMatrix of a matrix.
 ## This function creates a special "matrix" object
 ## that can cache its inverseMatrix.
+
 makeCacheMatrix = function(myMatrix = matrix()) {
   inverseMatrix = NULL
   set = function(x) {
@@ -18,6 +19,7 @@ makeCacheMatrix = function(myMatrix = matrix()) {
 ## "matrix" returned by `makeCacheMatrix` above. If the inverseMatrix has
 ## already been calculated (and the matrix has not changed), then
 ## `cacheSolve` should retrieve the inverseMatrix from the cache.
+
 cacheSolve = function(myMatrix, ...) {
   inverseMatrix = myMatrix$getinv()
   if(!is.null(inverseMatrix)) {
